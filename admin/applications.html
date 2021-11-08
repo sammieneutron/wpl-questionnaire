@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Admin Dahboard - WPL</title>
+    <link rel="apple-touch-icon" href="../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CMuli:300,400,500,700" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN ROBUST CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/app.css">
+    <!-- END ROBUST CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/pages/login-register.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/pages/users.css">
+    <!-- END Custom CSS-->
+  </head>
+  <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <!-- fixed-top-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-semi-dark navbar-shadow">
+        <div class="navbar-wrapper">
+          <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+              <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+              <li class="nav-item"><a class="navbar-brand" href="index.html">
+                <!-- <img class="brand-logo" alt="robust admin logo" src="../app-assets/images/logo/logo-light-sm.png"> -->
+                  <h3 class="brand-text">Admin</h3></a></li>
+              <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
+            </ul>
+          </div>
+          <div class="navbar-container content">
+            <div class="collapse navbar-collapse" id="navbar-mobile">
+              <ul class="nav navbar-nav mr-auto float-left">
+                <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu">         </i></a></li>
+               
+              </ul>
+              <ul class="nav navbar-nav float-right"> 
+                <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="avatar avatar-online"><img src="../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span><span class="user-name">Super Admin</span></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="login-with-bg-image.html"><i class="ft-power"></i> Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="main-menu menu-fixed menu-dark menu-accordion    menu-shadow " data-scroll-to-active="true">
+        <div class="main-menu-content">
+          <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+                <a href="index.html"><i class="icon-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span></a>
+            </li>
+            <li class=" nav-item">
+                <a href="applications.html"><i class="icon-user"></i><span class="menu-title" data-i18n="nav.dash.main">Applications</span></a>
+            </li>
+            <li class=" nav-item">
+                <a href="sub-admin.html"><i class="icon-user"></i><span class="menu-title" data-i18n="nav.dash.main">Sub-Admin</span></a>
+            </li>
+            <li class=" nav-item">
+                <a href="activity-logs.html"><i class="icon-home"></i><span class="menu-title" data-i18n="nav.dash.main">Activity logs</span></a>
+            </li>
+        </div>
+    </div>
+
+    <div class="app-content content">
+        <div class="content-wrapper">
+          <div class="content-header row">
+        </div>
+        <div class="content-detached">
+            <div class="content-body">
+                <section id="configuration">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-head">
+                                    <div class="card-header">
+                                        <h4 class="card-title">All Applications</h4>
+                                        <a class="heading-elements-toggle"><i class="ft-ellipsis-h font-medium-3"></i></a>
+                                        <div class="heading-elements">
+                                          
+                                            <button class="btn btn-primary btn-sm"><i class="ft-upload white"></i> Export Excel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body card-dashboard">
+                                        <table class="table table-striped table-bordered zero-configuration">
+                                            <thead>
+                                                <tr>
+                                                    <th>Company Name</th>
+                                                    <th>Address</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Email</th>
+                                                    <th>Area of Op.</th>
+                                                    <th>Respondent</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>James & Son Engineering Ltd.</td>
+                                                    <td>345, Ozumba Street, Akoko, Agege, Lagos</td>
+                                                    <td>09076547384</td>
+                                                    <td>jamesandsonltd@gmail.com</td>
+                                                    <td>Swamp Land</td>
+                                                    <td>Managing Director</td>
+                                                    <td>
+                                                        <span class="dropdown">
+                                                            <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-warning dropdown-toggle dropdown-menu-right btn-sm"><i class="ft-settings white"></i></button>
+                                                            <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right">
+                                                                <a href="view-application.html" class="dropdown-item"><i class="ft-eye"></i> View</a>
+                                                                <a href="#" class="dropdown-item danger"><i class="ft-trash-2"></i> Delete</a>
+                                                            </span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <footer class="footer footer-static footer-light navbar-border">
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2021, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Facilitated by &nbsp; &nbsp; <img src="app-assets/images/wpl.png" class="brand-logo" alt=""></span></p>
+      </footer>
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="../app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="../app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN ROBUST JS-->
+    <script src="../app-assets/js/core/app-menu.js"></script>
+    <script src="../app-assets/js/core/app.js"></script>
+    <!-- END ROBUST JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="../app-assets/js/scripts/tables/datatables/datatable-basic.js"></script>
+    <!-- END PAGE LEVEL JS-->
+  </body>
+</html>
